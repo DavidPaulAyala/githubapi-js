@@ -1,13 +1,18 @@
-var apiKey = require('./../.env').apiKey;
+var User = require('./../js/github.js').userModule;
 
-(document).ready(function() {
-  $('#findUser').click(function() {
+function displayRepos(response){
+  $('.showRepos').text("");
+  response.forEach(function(repo){
+    $('.showRepos').append("<li>" + repo.name + " : " + repo.description + "</li>");
+  });
+}
+
+
+$(document).ready(function() {
+  $('#findUser').submit(function(event){
+    event.preventDefault();
     var userName = $('#user').val();
-    $('#user').val("");
-    $.get('https://api.github.com/users/' + userName + '?access_token=' + apiKey).then(function(response){
-      $('.showRepos').text("The repsitories for " + userName + " are " + response.main.public_repos + "%");
-    }).fail(function(error) {
-      $('.showRepos').text(error.responseJSON.message);
-    });
+    var inputtedUser = new User(userName);
+    inputtedUser.getRepos(displayRepos);
   });
 });
