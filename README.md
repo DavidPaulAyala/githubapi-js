@@ -24,7 +24,7 @@ CSS,
 JS,
 Gulp,
 Bower,
-Sass
+Sass_
 
 ## Setup Instructions
 
