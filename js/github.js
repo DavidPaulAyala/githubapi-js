@@ -4,9 +4,9 @@ function User(userName){
   this.userName = userName;
 }
 
-User.prototype.getRepos = function(cb){
-  $.get('https://api.github.com/users/' + this.userName + '/repos?access_token=' + apiKey).then(function(response){
-    cb(response);
+User.prototype.getRepos = function(name){
+  $.get('https://api.github.com/users/' + name + '/repos?access_token=' + apiKey).then(function(response){);
+  console.log(response);
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
