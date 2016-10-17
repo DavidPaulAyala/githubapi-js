@@ -28,7 +28,7 @@ Sass_
 * _Create a file called .env in the top level of the directory_
 * _Obtain a personal access token from your GitHub account_
 * _Enter - exports.apiKey = "YOUR-API-KEY" - in the .env file_
-_Run the following commands in the top level of the directory in your terminal_
+* _Run the following commands in the top level of the directory in your terminal_
     * _npm install_
     * _bower install_
     * _gulp build_
