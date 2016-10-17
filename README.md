@@ -11,11 +11,7 @@ _This web app allows a user to search for users on GitHub using the github API_
 
 |Behavior|Input        |Output|
 |--------|:-----------:|-----:|
-||||
-||||
-||||
-||||
-||||
+|App returns name and description of repositories from a given GitHub username|DavidPaulAyala|address-book, practice with objects, constructors, and prototypes|
 
 ## Technologies Used
 
@@ -28,18 +24,26 @@ Sass_
 
 ## Setup Instructions
 
-* _Example_
+* _Clone the Repository_
+* _Create a file called .env in the top level of the directory_
+* _Obtain a personal access token from your GitHub account_
+* _Enter - exports.apiKey = "YOUR-API-KEY" - in the .env file_
+_Run the following commands in the top level of the directory in your terminal_
+    * _npm install_
+    * _bower install_
+    * _gulp build_
+    * _gulp serve_
+
 
 ## Technologies Used
 
 _HTML,
-CSS,
-JS,
-PHP,
-Silex,
-Twig,
-PHPUnit,
-MySQL_
+JavaScript,
+NPM,
+Bower,
+Gulp,
+Sass,
+Bootstrap_
 
 ## Licensing
 
