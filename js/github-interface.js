@@ -1,10 +1,12 @@
 var User = require('./../js/github.js').userModule;
 
 $(document).ready(function(){
-  $('#findUser').click(function(){
+  $("#findUser").submit(function(event){
     event.preventDefault();
-    var name = $('#user').val();
-    var inputtedUser = new User();
-    inputtedUser.getRepos(name);
+
+    $(".showRepos").empty();
+    var username = $("#user").val();
+    var newUser = new User(username);
+    newUser.getRepos(newUser.username);
   });
 });
